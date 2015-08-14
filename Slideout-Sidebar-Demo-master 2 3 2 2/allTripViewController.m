@@ -9,6 +9,7 @@
 #import "allTripViewController.h"
 #import "DetailTripViewController.h"
 #import "UIImageView+WebCache.h"
+
 @interface allTripViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 
