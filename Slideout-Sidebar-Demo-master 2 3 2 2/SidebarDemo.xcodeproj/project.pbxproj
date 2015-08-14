@@ -41,6 +41,7 @@
 		A94446301B7B6BC700D7F587 /* resetPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = A944462F1B7B6BC700D7F587 /* resetPassword.m */; };
 		A94B04221B796DFB002432A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94B04201B796DFB002432A3 /* Main.storyboard */; };
 		A95E56CA1B72E90100506FEC /* PlaceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A95E56C91B72E90100506FEC /* PlaceInfo.m */; };
+		A964F74A1B7F429800C6F99B /* AddtripPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = A964F7491B7F429800C6F99B /* AddtripPreview.m */; };
 		A96601971B72116C0056ADD9 /* aPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A96601961B72116C0056ADD9 /* aPlaceListCell.m */; };
 		A96F0F051B7D4CE7003686CE /* Addnewtrip.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F0F041B7D4CE7003686CE /* Addnewtrip.m */; };
 		A96F0F071B7D57A4003686CE /* sample2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A96F0F061B7D57A4003686CE /* sample2.jpg */; };
@@ -65,8 +66,6 @@
 		A99892571B7E98DB00731A56 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892541B7E98DB00731A56 /* test1.png */; };
 		A99892581B7E98DB00731A56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892551B7E98DB00731A56 /* test2.png */; };
 		A99892591B7E98DB00731A56 /* test6.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892561B7E98DB00731A56 /* test6.png */; };
-		A99892691B7EA0CD00731A56 /* allTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99892661B7EA0CD00731A56 /* allTripViewController.m */; };
-		A998926A1B7EA0CD00731A56 /* DetailTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99892681B7EA0CD00731A56 /* DetailTripViewController.m */; };
 		A9AFDBC41B72297E0002D2E9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */; };
 		A9AFDBC51B72297E0002D2E9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA61B72297E0002D2E9 /* NSData+ImageContentType.m */; };
 		A9AFDBC61B72297E0002D2E9 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA81B72297E0002D2E9 /* SDImageCache.m */; };
@@ -160,6 +159,8 @@
 		A94B04211B796DFB002432A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SidebarDemo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A95E56C81B72E90100506FEC /* PlaceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceInfo.h; sourceTree = "<group>"; };
 		A95E56C91B72E90100506FEC /* PlaceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceInfo.m; sourceTree = "<group>"; };
+		A964F7481B7F429800C6F99B /* AddtripPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddtripPreview.h; sourceTree = "<group>"; };
+		A964F7491B7F429800C6F99B /* AddtripPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddtripPreview.m; sourceTree = "<group>"; };
 		A96601951B72116C0056ADD9 /* aPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aPlaceListCell.h; sourceTree = "<group>"; };
 		A96601961B72116C0056ADD9 /* aPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aPlaceListCell.m; sourceTree = "<group>"; };
 		A96F0F031B7D4CE7003686CE /* Addnewtrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addnewtrip.h; sourceTree = "<group>"; };
@@ -189,10 +190,6 @@
 		A99892541B7E98DB00731A56 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		A99892551B7E98DB00731A56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 		A99892561B7E98DB00731A56 /* test6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test6.png; sourceTree = "<group>"; };
-		A99892651B7EA0CD00731A56 /* allTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allTripViewController.h; sourceTree = "<group>"; };
-		A99892661B7EA0CD00731A56 /* allTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allTripViewController.m; sourceTree = "<group>"; };
-		A99892671B7EA0CD00731A56 /* DetailTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTripViewController.h; sourceTree = "<group>"; };
-		A99892681B7EA0CD00731A56 /* DetailTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTripViewController.m; sourceTree = "<group>"; };
 		A9AFDBA31B72297E0002D2E9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		A9AFDBA51B72297E0002D2E9 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -294,10 +291,8 @@
 				9E78A8DA1B7C67A3006CB188 /* Tripmodule_vc.m */,
 				A96F0F031B7D4CE7003686CE /* Addnewtrip.h */,
 				A96F0F041B7D4CE7003686CE /* Addnewtrip.m */,
-				A99892651B7EA0CD00731A56 /* allTripViewController.h */,
-				A99892661B7EA0CD00731A56 /* allTripViewController.m */,
-				A99892671B7EA0CD00731A56 /* DetailTripViewController.h */,
-				A99892681B7EA0CD00731A56 /* DetailTripViewController.m */,
+				A964F7481B7F429800C6F99B /* AddtripPreview.h */,
+				A964F7491B7F429800C6F99B /* AddtripPreview.m */,
 			);
 			name = Addtripmodule;
 			sourceTree = "<group>";
@@ -785,7 +780,6 @@
 			files = (
 				A9AFDBC81B72297E0002D2E9 /* SDWebImageDecoder.m in Sources */,
 				F4090B9A1A0F67D000651F6F /* ViewController.m in Sources */,
-				A998926A1B7EA0CD00731A56 /* DetailTripViewController.m in Sources */,
 				A9AFDBC41B72297E0002D2E9 /* MKAnnotationView+WebCache.m in Sources */,
 				9EB6EAEC1B63D4CE005F6D32 /* login_vc.m in Sources */,
 				9EB6EAE61B63D4CE005F6D32 /* addTripHome_vc.m in Sources */,
@@ -816,13 +810,13 @@
 				9EB6EAEE1B63D4CE005F6D32 /* splash_vc.m in Sources */,
 				A9AFDBCC1B72297E0002D2E9 /* SDWebImagePrefetcher.m in Sources */,
 				A9AFDBD01B72297E0002D2E9 /* UIImage+WebP.m in Sources */,
-				A99892691B7EA0CD00731A56 /* allTripViewController.m in Sources */,
 				A96F0F131B7D5EB3003686CE /* DownPicker.m in Sources */,
 				A9AFDBCB1B72297E0002D2E9 /* SDWebImageManager.m in Sources */,
 				A9AFDBC51B72297E0002D2E9 /* NSData+ImageContentType.m in Sources */,
 				01E9DF621B7B0E52002BA803 /* NearMeTable.m in Sources */,
 				A95E56CA1B72E90100506FEC /* PlaceInfo.m in Sources */,
 				F4090B941A0F67D000651F6F /* main.m in Sources */,
+				A964F74A1B7F429800C6F99B /* AddtripPreview.m in Sources */,
 				A96601971B72116C0056ADD9 /* aPlaceListCell.m in Sources */,
 				9EC4B59E1B6381900023BF73 /* newtestclass.m in Sources */,
 				9E4CF5D81B77555C00CA0253 /* aMapview_VC.m in Sources */,

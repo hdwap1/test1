@@ -102,17 +102,100 @@
 */
 
 - (IBAction)Uploadtripbtnaction:(UIButton *)sender {
-    [AddTripObj addObject:self.addTripName.text forKey:@"Place_Name"];
+//    [AddTripObj addObject:self.addTripName.text forKey:@"Place_Name"];
+//    
+//    [AddTripObj addObject:[PFUser currentUser].objectId forKey:@"Connect_user_id"];
+//    NSLog(@"%@",[[PFUser currentUser]objectId]);
+//    [AddTripObj saveInBackground];
+    if(_addTripName.text!=nil && _Addtripstate.text!=nil && _Addtripcity.text!=nil && _Addtriptextview.text!=nil &&_addTripImage.image!=nil)
+    {
+        
+        
+        
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",_addTripName.text] forKey:@"Place_name"];
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",_Addtripstate.text] forKey:@"State"];
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",_Addtripcity.text] forKey:@"City"];
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",_Addtriptextview.text] forKey:@"Description"];
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",[PFUser currentUser].username] forKey:@"Upload_by"];
+        [AddTripObj setObject:[NSString stringWithFormat:@"%@",[PFUser currentUser].objectId] forKey:@"Connect_user_id"];
+        
+        
+        
+        
+        [AddTripObj saveInBackgroundWithBlock:^(BOOL result,NSError *error)
+         {
+             if(result)
+             {
+                 NSLog(@"Done");
+                 
+                 
+                 UIStoryboard *aStory=[UIStoryboard storyboardWithName:@"Main2" bundle:nil];
+                 AddtripPreview *near=[aStory instantiateViewControllerWithIdentifier:@"addtrippreview"];
+                 [self.navigationController pushViewController:near animated:YES];
+                 
+             }
+             else
+             {
+                 UIAlertView *alrt = [[UIAlertView alloc] initWithTitle:@"Login/Register Required" message:@"Please login/Register to use thi feature" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles: @"Login/Register",nil];
+                 
+                 [alrt show];     }
+         }];
+        
+    }
+    else
+    {
+        UIAlertView *alrt = [[UIAlertView alloc] initWithTitle:@"Login/Register Required" message:@"Please login/Register to use thi feature" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles: @"Login/Register",nil];
+        
+        [alrt show];
+    }
     
-    [AddTripObj addObject:[PFUser currentUser].objectId forKey:@"Connect_user_id"];
-    NSLog(@"%@",[[PFUser currentUser]objectId]);
-    [AddTripObj saveInBackground];
+    //    [AddTripObj addObject:self.addTripName.text forKey:@"Place_Name"];
+    //
+    //    [AddTripObj addObject:[PFUser currentUser].objectId forKey:@"Connect_user_id"];
+    //    NSLog(@"%@",[[PFUser currentUser]objectId]);
+    //    [AddTripObj saveInBackground];
     
 }
 
 - (IBAction)Uploadimagebtnaction:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
     
 }
-- (IBAction)Addtripbarbtnaction:(UIBarButtonItem *)sender {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+    
+    
+    PFFile *file = [PFFile fileWithName:@"place.png" data:imageData];
+    [AddTripObj setObject:file forKey:@"Images"];
+    
+    [file saveInBackground];
+    
+    //[userimage saveInBackground];
+    // [file saveInBackground];
+    // userimage[@"profile_pic"]=file;
+    
+    
+    [file getDataInBackgroundWithBlock:
+     ^(NSData *aDt, NSError *error){
+         
+         self.addTripImage.image=[UIImage imageWithData:aDt];
+     }];
+    self.addTripImage.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
 }
+
+    
+
+
+
 @end

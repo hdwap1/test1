@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DownPicker.h"
 #import <Parse/Parse.h>
+#import "AddtripPreview.h"
 
 @interface Addnewtrip : UIViewController <UIScrollViewDelegate>
 {
