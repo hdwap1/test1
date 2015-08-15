@@ -1123,6 +1123,9 @@
                                 <state key="normal" title="Upload image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeImageAct:" destination="vHK-90-tb3" eventType="touchUpInside" id="Lm8-9Y-ueM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="MSH-qq-lsQ">
                                 <rect key="frame" x="79" y="169" width="218" height="30"/>
@@ -1154,6 +1157,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTripAct:" destination="vHK-90-tb3" eventType="touchUpInside" id="nWz-Yf-mWa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yo0-J1-fyN">
                                 <rect key="frame" x="32" y="529" width="44" height="30"/>
@@ -1161,13 +1167,27 @@
                                 <state key="normal" title="Delete">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteAct:" destination="vHK-90-tb3" eventType="touchUpInside" id="GRg-Eu-Iy1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="n8C-lL-q3g">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="j67-I4-ZL5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="j67-I4-ZL5">
+                            <connections>
+                                <action selector="editMain:" destination="vHK-90-tb3" id="uGb-If-TB7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editCity" destination="Ymp-aQ-9pY" id="l6Z-Ye-tWh"/>
+                        <outlet property="editDescription" destination="jAo-1j-fvh" id="Yno-W1-DGO"/>
+                        <outlet property="editImage" destination="0Un-Gc-2Qc" id="4PB-Dd-boC"/>
+                        <outlet property="editName" destination="thN-4I-XbA" id="fZ4-sT-e1l"/>
+                        <outlet property="editState" destination="MSH-qq-lsQ" id="goP-Tw-x9p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKG-Ea-cSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

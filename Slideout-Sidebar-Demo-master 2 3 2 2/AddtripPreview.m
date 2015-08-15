@@ -34,4 +34,15 @@
 }
 */
 
+- (IBAction)editMain:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)changeImageAct:(UIButton *)sender {
+}
+
+- (IBAction)deleteAct:(UIButton *)sender {
+}
+
+- (IBAction)addTripAct:(UIButton *)sender {
+}
 @end
