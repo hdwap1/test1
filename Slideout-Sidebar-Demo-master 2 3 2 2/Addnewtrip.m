@@ -107,7 +107,7 @@
 //    [AddTripObj addObject:[PFUser currentUser].objectId forKey:@"Connect_user_id"];
 //    NSLog(@"%@",[[PFUser currentUser]objectId]);
 //    [AddTripObj saveInBackground];
-    if(_addTripName.text!=nil && _Addtripstate.text!=nil && _Addtripcity.text!=nil && _Addtriptextview.text!=nil &&_addTripImage.image!=nil)
+    if(_addTripName.text!=nil && _Addtripstate.text!=nil && _Addtripcity.text!=nil && _Addtriptextview.text!=nil)
     {
         
         
@@ -131,6 +131,9 @@
                  
                  UIStoryboard *aStory=[UIStoryboard storyboardWithName:@"Main2" bundle:nil];
                  AddtripPreview *near=[aStory instantiateViewControllerWithIdentifier:@"addtrippreview"];
+                 near.strObjectId=AddTripObj.objectId;
+                 
+                 
                  [self.navigationController pushViewController:near animated:YES];
                  
              }
