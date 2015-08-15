@@ -61,7 +61,7 @@
     
 
         [self.navigationController pushViewController:aHome animated:YES];
-        
+        //[self.navigationController popToViewController:aHome animated:YES];
     }
     
 }
