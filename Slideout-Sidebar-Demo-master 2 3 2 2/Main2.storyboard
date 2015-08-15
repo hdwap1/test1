@@ -784,6 +784,20 @@
             </objects>
             <point key="canvasLocation" x="771" y="858"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jI0-h5-rNX">
+            <objects>
+                <viewController id="w8c-0d-pRi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s7x-lm-EDE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhu-uY-OQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="594"/>
+        </scene>
         <!--Addtrip Preview-->
         <scene sceneID="BPC-6a-HyD">
             <objects>

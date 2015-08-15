@@ -138,7 +138,8 @@
              {
                  UIAlertView *alrt = [[UIAlertView alloc] initWithTitle:@"Login/Register Required" message:@"Please login/Register to use thi feature" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles: @"Login/Register",nil];
                  
-                 [alrt show];     }
+                 [alrt show];
+                 NSLog(@"asdf");}
          }];
         
     }
