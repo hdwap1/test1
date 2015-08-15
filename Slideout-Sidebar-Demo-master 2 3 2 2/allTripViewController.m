@@ -9,6 +9,7 @@
 #import "allTripViewController.h"
 #import "DetailTripViewController.h"
 #import "UIImageView+WebCache.h"
+#import "SWRevealViewController.h"
 
 @interface allTripViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
@@ -37,7 +38,14 @@
 //    
 //    [_act startAnimating];
 //    
-    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.Alltripbarbtn setTarget: self.revealViewController];
+        [self.Alltripbarbtn setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
     
     PFQuery *query = [PFQuery queryWithClassName:@"AddTrip"];
     //[query whereKey:@"user" containedIn:[NSArray arrayWithObjects:[PFUser currentUser], nil]];
@@ -128,6 +136,9 @@
     
     return YES;
 }
+
+
+
 -(void)updateTableForQuery:(NSString*)strQuery{
     
     if(!strQuery || strQuery.length==0){

@@ -18,5 +18,6 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *txtsearch;
 @property (weak, nonatomic) IBOutlet UITableView *alltrip;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *Alltripbarbtn;
 
 @end

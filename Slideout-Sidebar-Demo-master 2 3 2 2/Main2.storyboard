@@ -854,8 +854,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FIb-5N-tb0"/>
+                    <navigationItem key="navigationItem" id="FIb-5N-tb0">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Zcf-Ts-c1r"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="Alltripbarbtn" destination="Zcf-Ts-c1r" id="1Lf-Gd-TU8"/>
                         <outlet property="alltrip" destination="BVk-no-1XP" id="DHx-RJ-Mna"/>
                         <outlet property="txtsearch" destination="sME-oQ-qRo" id="1Iq-11-Yur"/>
                     </connections>
