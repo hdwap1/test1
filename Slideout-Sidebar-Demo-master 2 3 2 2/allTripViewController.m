@@ -23,6 +23,16 @@
     AllData =[[NSMutableArray alloc] init];
     mutArrMaster = [[NSMutableArray alloc] init];
     
+    [Parse setApplicationId:@"aRdKtgCLpKk9PTOpPgZUHIUutAFDxxOs9vCPIz93" clientKey:@"tAGtNESX10C3fa2sboyMOwO1JMTV9RhMvdyhIjvY"];
+    PFQuery *aQuery=[[PFQuery alloc]initWithClassName:@"Place_By_User"];
+    
+    [aQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            AllFeedPlace=[[NSArray alloc]initWithArray:objects];
+            master=[[NSArray alloc]initWithArray:objects];
+            [_alltrip reloadData];
+        }
+    }];
     
     self.navigationController.navigationItem.hidesBackButton = YES;
     
@@ -92,28 +102,25 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return AllData.count;
+    return AllFeedPlace.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell1"];
+    FeedTableCellTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell1"];
+    cell.feedPlaceName.text=[[AllFeedPlace objectAtIndex:indexPath.row]objectForKey:@"Place_name"];
+    cell.feedPlaceCity.text=[[AllFeedPlace objectAtIndex:indexPath.row]objectForKey:@"City"];
+    cell.feedPlaceUser.text=[[AllFeedPlace objectAtIndex:indexPath.row]objectForKey:@"Upload_by"];
     
-    UILabel *text1=(UILabel *)[cell viewWithTag:1];
-    text1.text=[[AllData objectAtIndex:indexPath.row] objectForKey:@"tn"];
-    [cell addSubview:text1];
+    PFFile *fileRetrive=[[AllFeedPlace objectAtIndex:indexPath.row]objectForKey:@"Images"];
     
-    UILabel *text2=(UILabel *)[cell viewWithTag:2];
-    text2.text=[[AllData objectAtIndex:indexPath.row] objectForKey:@"tc"];
-    [cell addSubview:text2];
+    [fileRetrive getDataInBackgroundWithBlock:
+     ^(NSData *aDt, NSError *error){
+         
+         cell.feedPlaceImage.image=[UIImage imageWithData:aDt];
+     }];
+
     
-    PFFile *imageFile=[[AllData objectAtIndex:indexPath.row] objectForKey:@"pimg"];
-    NSLog(@"%@",imageFile.url);
-    
-    UIImageView *aImgView = (UIImageView*)[cell viewWithTag:3];
-    
-    [aImgView sd_setImageWithURL:[NSURL URLWithString:imageFile.url] placeholderImage:[UIImage imageNamed:@"search.png"]];
-    
-    
+
     return cell;
 }
 
@@ -167,19 +174,19 @@
 //}
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"detailview"]) {
-        DetailTripViewController *destViewController = segue.destinationViewController;
-        
-        NSIndexPath *indexPath;
-        indexPath = [self.alltrip indexPathForSelectedRow];
-        
-        destViewController.tripnamed=(NSMutableDictionary *)[AllData objectAtIndex:indexPath.row];
-        
-        
-    }
-    
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"detailview"]) {
+//        DetailTripViewController *destViewController = segue.destinationViewController;
+//        
+//        NSIndexPath *indexPath;
+//        indexPath = [self.alltrip indexPathForSelectedRow];
+//        
+//        destViewController.tripnamed=(NSMutableDictionary *)[AllData objectAtIndex:indexPath.row];
+//        
+//        
+//    }
+//    
+//}
 
 
 
@@ -199,5 +206,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *aStory=[UIStoryboard storyboardWithName:@"Main2" bundle:nil];
+
+    DetailTripViewController *detail=[aStory instantiateViewControllerWithIdentifier:@"DetailTripViewController"];
+    
+    detail.DetailArry=[AllFeedPlace objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    
+
+  
+}
 
 @end

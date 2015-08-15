@@ -10,13 +10,16 @@
 #import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
 
-@interface DetailTripViewController : UIViewController <UIScrollViewDelegate>
+
+@interface DetailTripViewController : UIViewController <UIScrollViewDelegate,MKMapViewDelegate,CLLocationManagerDelegate>
 {
     NSMutableArray *AllData,*mutArrMaster;
     NSString *trip_id;
     NSString *user_id;
     BOOL chk_rate;
     NSString *rateNumber;
+    CLLocationManager *locate;
+    CLGeocoder *geo;
 }
 @property (weak, nonatomic) IBOutlet UIView *Tripviewratingoutlet;
 @property (weak, nonatomic) IBOutlet UIScrollView *TripviewScrollview;
@@ -40,7 +43,7 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *Tripmapview;
 
-
+@property (strong,nonatomic) PFObject *DetailArry;
 
 
 @end

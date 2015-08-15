@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "FeedTableCellTableViewCell.h"
+#import "DetailTripViewController.h"
 
 
 @interface allTripViewController : UIViewController
 {
     NSMutableArray *AllData,*mutArrMaster;
     UIImage *displayImg;
+    NSArray *AllFeedPlace;
+    NSArray *master;
       
 }
 @property (weak, nonatomic) IBOutlet UITextField *txtsearch;
