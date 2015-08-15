@@ -68,6 +68,8 @@
 		A99892591B7E98DB00731A56 /* test6.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892561B7E98DB00731A56 /* test6.png */; };
 		A998926F1B7EA3A300731A56 /* DetailTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A998926C1B7EA3A300731A56 /* DetailTripViewController.m */; };
 		A99892701B7EA3A300731A56 /* allTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A998926E1B7EA3A300731A56 /* allTripViewController.m */; };
+		A99892721B7EA9ED00731A56 /* test12.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892711B7EA9ED00731A56 /* test12.png */; };
+		A99892741B7EB37F00731A56 /* fullrate.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892731B7EB37F00731A56 /* fullrate.png */; };
 		A9AFDBC41B72297E0002D2E9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */; };
 		A9AFDBC51B72297E0002D2E9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA61B72297E0002D2E9 /* NSData+ImageContentType.m */; };
 		A9AFDBC61B72297E0002D2E9 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA81B72297E0002D2E9 /* SDImageCache.m */; };
@@ -196,6 +198,8 @@
 		A998926C1B7EA3A300731A56 /* DetailTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTripViewController.m; sourceTree = "<group>"; };
 		A998926D1B7EA3A300731A56 /* allTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allTripViewController.h; sourceTree = "<group>"; };
 		A998926E1B7EA3A300731A56 /* allTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allTripViewController.m; sourceTree = "<group>"; };
+		A99892711B7EA9ED00731A56 /* test12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test12.png; sourceTree = "<group>"; };
+		A99892731B7EB37F00731A56 /* fullrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullrate.png; sourceTree = "<group>"; };
 		A9AFDBA31B72297E0002D2E9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		A9AFDBA51B72297E0002D2E9 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		9EB6EAEF1B63D506005F6D32 /* launchscrimages */ = {
 			isa = PBXGroup;
 			children = (
+				A99892731B7EB37F00731A56 /* fullrate.png */,
+				A99892711B7EA9ED00731A56 /* test12.png */,
 				A97B9A771B7050BF0018A6E2 /* acancel.png */,
 				A97B9A781B7050BF0018A6E2 /* asearch.png */,
 				9EB6EB0F1B63D647005F6D32 /* button.png */,
@@ -748,6 +754,7 @@
 			files = (
 				9EF887131B63A1C2000EB283 /* Home.png in Resources */,
 				9EB6EB131B63D647005F6D32 /* button.png in Resources */,
+				A99892721B7EA9ED00731A56 /* test12.png in Resources */,
 				9EF887141B63A1C2000EB283 /* Logout.png in Resources */,
 				A96F0F101B7D5EB3003686CE /* downArrow.png in Resources */,
 				9EB6EB001B63D526005F6D32 /* test3.jpg in Resources */,
@@ -770,6 +777,7 @@
 				A96F0F071B7D57A4003686CE /* sample2.jpg in Resources */,
 				9EB6EB041B63D526005F6D32 /* test8.jpg in Resources */,
 				A99892571B7E98DB00731A56 /* test1.png in Resources */,
+				A99892741B7EB37F00731A56 /* fullrate.png in Resources */,
 				A96F0F111B7D5EB3003686CE /* downArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,6 +25,8 @@
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UIPageControl *pageControl;
 
+@property (weak, nonatomic) IBOutlet UIView *Shadowview;
+
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *aSearchtripbarbtn;
 

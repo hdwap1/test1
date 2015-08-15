@@ -56,6 +56,8 @@ self.view.backgroundColor = [UIColor colorWithRed:0.710 green:0.710 blue:0.616 a
             aobject=[[PFObject alloc]initWithClassName:@"Place_Default"];
             aobject=objects;
             
+            
+            
             [_AcollectionView reloadData];
             [_Acollectionviewslider reloadData];
             self.aLoadActivity.hidden=YES;
@@ -87,6 +89,7 @@ self.view.backgroundColor = [UIColor colorWithRed:0.710 green:0.710 blue:0.616 a
     self.collectionView.backgroundColor=[UIColor colorWithRed:0.710 green:0.710 blue:0.616 alpha:1.000];
      self.AcollectionView.backgroundColor= [UIColor colorWithRed:0.710 green:0.710 blue:0.616 alpha:1.000];
   
+
 }
 
 

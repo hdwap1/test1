@@ -21,15 +21,22 @@
 //    PFUser *user1=[PFUser currentUser];
 //    NSString *user_id=user1.objectId;
     
+    self.navigationController.navigationBar.hidden=false;
+    self.view.backgroundColor = [UIColor colorWithRed:0.710 green:0.710 blue:0.616 alpha:1.000];
+    
+    _Tripviewratingoutlet.backgroundColor =[UIColor colorWithRed:0.710 green:0.710 blue:0.616 alpha:1.000];
     
     
-    _tripnametext.text= tripnamed[@"tn"];
-    _tripcitytext.text=tripnamed[@"tc"];
-    _tripcountrytext.text=tripnamed[@"tcc"];
-    _tripabouttext.text=tripnamed[@"ap"];
+    _TripviewScrollview.backgroundColor = [UIColor colorWithWhite:0.902 alpha:1.000];
+    
+    [_TripviewScrollview setContentSize:(CGSizeMake(_TripviewScrollview.frame.size.width,980))];
+    
+    _TripviewScrollview.backgroundColor = [UIColor colorWithRed:0.710 green:0.710 blue:0.616 alpha:1.000];
+    
+   
     trip_id=tripnamed[@"tripid"];
 
-    _txttripId.text=tripnamed[@"tripid"];
+  
    // _username.text=tripnamed[@"un"];
     
     PFFile *imageFile=[tripnamed objectForKey:@"pimg"];

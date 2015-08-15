@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DC719643448FABF2F6BCB3AE9677BC49614FC9CD</key>
-		<string>https://github.com/hdwap1/test1</string>
+		<string>https://github.com/hdwap1/test1.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Slideout-Sidebar-Demo-master 2 3 2 2/SidebarDemo.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hdwap1/test1</string>
+	<string>https://github.com/hdwap1/test1.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>DC719643448FABF2F6BCB3AE9677BC49614FC9CD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>untitled%20folder%203</string>
+			<string>test1</string>
 		</dict>
 	</array>
 </dict>

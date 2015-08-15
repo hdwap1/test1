@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <MapKit/MapKit.h>
 
-@interface DetailTripViewController : UIViewController
+@interface DetailTripViewController : UIViewController <UIScrollViewDelegate>
 {
     NSMutableArray *AllData,*mutArrMaster;
     NSString *trip_id;
@@ -17,11 +18,9 @@
     BOOL chk_rate;
     NSString *rateNumber;
 }
+@property (weak, nonatomic) IBOutlet UIView *Tripviewratingoutlet;
+@property (weak, nonatomic) IBOutlet UIScrollView *TripviewScrollview;
 @property (weak, nonatomic) IBOutlet UIImageView *tripImg;
-@property (weak, nonatomic) IBOutlet UILabel *tripnametext;
-@property (weak, nonatomic) IBOutlet UILabel *tripcitytext;
-@property (weak, nonatomic) IBOutlet UILabel *tripcountrytext;
-@property (weak, nonatomic) IBOutlet UILabel *tripabouttext;
 @property (nonatomic,strong) NSMutableDictionary *tripnamed;
 - (IBAction)rate1:(id)sender;
 - (IBAction)rate2:(id)sender;
@@ -34,13 +33,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *r4;
 @property (weak, nonatomic) IBOutlet UIButton *r5;
 @property (weak, nonatomic) IBOutlet UIImageView *i1;
-@property (weak, nonatomic) IBOutlet UILabel *lblLoginOwnerId;
-@property (weak, nonatomic) IBOutlet UILabel *lblTripOwnerId;
-@property (weak, nonatomic) IBOutlet UILabel *lblTripId;
-@property (weak, nonatomic) IBOutlet UILabel *sumofRating;
-@property (weak, nonatomic) IBOutlet UILabel *lblAverageRating;
-@property (weak, nonatomic) IBOutlet UILabel *txttripId;
+@property (weak, nonatomic) IBOutlet UILabel *Tripname;
+@property (weak, nonatomic) IBOutlet UILabel *Tripcity;
+@property (weak, nonatomic) IBOutlet UITextView *TripDescription;
+@property (weak, nonatomic) IBOutlet UILabel *Tripstate;
 
-@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet MKMapView *Tripmapview;
+
+
+
 
 @end
