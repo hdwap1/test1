@@ -66,6 +66,8 @@
 		A99892571B7E98DB00731A56 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892541B7E98DB00731A56 /* test1.png */; };
 		A99892581B7E98DB00731A56 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892551B7E98DB00731A56 /* test2.png */; };
 		A99892591B7E98DB00731A56 /* test6.png in Resources */ = {isa = PBXBuildFile; fileRef = A99892561B7E98DB00731A56 /* test6.png */; };
+		A998926F1B7EA3A300731A56 /* DetailTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A998926C1B7EA3A300731A56 /* DetailTripViewController.m */; };
+		A99892701B7EA3A300731A56 /* allTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A998926E1B7EA3A300731A56 /* allTripViewController.m */; };
 		A9AFDBC41B72297E0002D2E9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */; };
 		A9AFDBC51B72297E0002D2E9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA61B72297E0002D2E9 /* NSData+ImageContentType.m */; };
 		A9AFDBC61B72297E0002D2E9 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFDBA81B72297E0002D2E9 /* SDImageCache.m */; };
@@ -190,6 +192,10 @@
 		A99892541B7E98DB00731A56 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		A99892551B7E98DB00731A56 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 		A99892561B7E98DB00731A56 /* test6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test6.png; sourceTree = "<group>"; };
+		A998926B1B7EA3A300731A56 /* DetailTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTripViewController.h; sourceTree = "<group>"; };
+		A998926C1B7EA3A300731A56 /* DetailTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTripViewController.m; sourceTree = "<group>"; };
+		A998926D1B7EA3A300731A56 /* allTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allTripViewController.h; sourceTree = "<group>"; };
+		A998926E1B7EA3A300731A56 /* allTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allTripViewController.m; sourceTree = "<group>"; };
 		A9AFDBA31B72297E0002D2E9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		A9AFDBA41B72297E0002D2E9 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		A9AFDBA51B72297E0002D2E9 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -293,6 +299,10 @@
 				A96F0F041B7D4CE7003686CE /* Addnewtrip.m */,
 				A964F7481B7F429800C6F99B /* AddtripPreview.h */,
 				A964F7491B7F429800C6F99B /* AddtripPreview.m */,
+				A998926B1B7EA3A300731A56 /* DetailTripViewController.h */,
+				A998926C1B7EA3A300731A56 /* DetailTripViewController.m */,
+				A998926D1B7EA3A300731A56 /* allTripViewController.h */,
+				A998926E1B7EA3A300731A56 /* allTripViewController.m */,
 			);
 			name = Addtripmodule;
 			sourceTree = "<group>";
@@ -780,9 +790,11 @@
 			files = (
 				A9AFDBC81B72297E0002D2E9 /* SDWebImageDecoder.m in Sources */,
 				F4090B9A1A0F67D000651F6F /* ViewController.m in Sources */,
+				A998926F1B7EA3A300731A56 /* DetailTripViewController.m in Sources */,
 				A9AFDBC41B72297E0002D2E9 /* MKAnnotationView+WebCache.m in Sources */,
 				9EB6EAEC1B63D4CE005F6D32 /* login_vc.m in Sources */,
 				9EB6EAE61B63D4CE005F6D32 /* addTripHome_vc.m in Sources */,
+				A99892701B7EA3A300731A56 /* allTripViewController.m in Sources */,
 				9EF8871C1B63AB27000EB283 /* aMessagevc.m in Sources */,
 				A9AFDBD81B722E5D0002D2E9 /* aScrollCell.m in Sources */,
 				9EB6EAE71B63D4CE005F6D32 /* aLaunch_vc.m in Sources */,
